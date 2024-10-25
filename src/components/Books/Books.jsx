@@ -12,7 +12,7 @@ useEffect(() => {
 }, [])
 
   return (
-    <div className="mx-10 md:mx-20 lg:mx-40 mt-5 md:mt-10 mb-5 md:mb-10">
+    <div className="mx-10 md:mx-20 lg:mx-40 mt-5 md:mt-10 mb-5 md:mb-10 space-y-10">
       <div>
         <h1 className="text-2xl md:text-3xl lg:text-4xl text-black text-center font-bold">
           BOOKS

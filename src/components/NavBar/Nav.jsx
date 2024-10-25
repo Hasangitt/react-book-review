@@ -31,19 +31,19 @@ const Nav = () => {
                   <a>Home</a>
                 </li>
               </NavLink>
-              <NavLink to="/listed books">
+              <NavLink to="/listed-books">
                 <li>
                   <a>Listed Books</a>
                 </li>
               </NavLink>
-              <NavLink to="/pages to read">
+              <NavLink to="/pages-to-read">
                 <li>
                   <a>Pages To Read</a>
                 </li>
               </NavLink>
             </ul>
           </div>
-          <a className="btn btn-ghost text-black text-base md:text-xl">
+          <a href="/" className="btn btn-ghost text-black text-base md:text-xl">
             BanglaCode BookBar
           </a>
         </div>
@@ -54,12 +54,12 @@ const Nav = () => {
                 <a>Home</a>
               </li>
             </NavLink>
-            <NavLink to="/listed books">
+            <NavLink to="/listed-books">
               <li>
                 <a>Listed Books</a>
               </li>
             </NavLink>
-            <NavLink to="/pages to read">
+            <NavLink to="/pages-to-read">
               <li>
                 <a>Pages To Read</a>
               </li>
