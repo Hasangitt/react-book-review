@@ -1,4 +1,5 @@
 import Banner from "../Banner/Banner";
+import BookDetails from "../BookDetails/BookDetails";
 import Books from "../Books/Books";
 import Nav from "../NavBar/Nav";
 
