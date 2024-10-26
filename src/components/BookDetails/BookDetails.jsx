@@ -1,5 +1,8 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import Nav from "../NavBar/Nav";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useState } from "react";
 
 const BookDetails = () => {
   const books = useLoaderData();
@@ -19,6 +22,28 @@ const BookDetails = () => {
     publisher,
     year_of_publishing,
   } = book;
+
+  const [clicked, setClicked] = useState();
+
+   const handleReadTostify = () =>{
+    if(!clicked){
+    toast.success("Book Added Read Books List!")
+    setClicked(true);
+    }
+    else{
+      toast.error("Already Added Read List!");
+    }
+   };
+
+   const handleWhishListTostify = () =>{
+    if(!clicked){
+      toast.success("Book Added Whish Books List!")
+      setClicked(true);
+      }
+      else{
+        toast.error("Already Added Whish Books List!");
+      }
+   };
 
   return (
     <div>
@@ -70,8 +95,13 @@ const BookDetails = () => {
           <h3>
             Rating: <span className="text-black font-semibold]">{rating} </span>{" "}
           </h3>
+          <div className="flex gap-4">
+          <Link><button onClick={handleReadTostify} className="btn">Read</button></Link>
+          <Link><button onClick={handleWhishListTostify} className="btn btn-success">Whish List</button></Link>
+        </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

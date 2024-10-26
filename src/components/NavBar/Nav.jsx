@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import './Nav.css'
 
 const Nav = () => {
   return (
@@ -26,7 +27,7 @@ const Nav = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content text-white bg-base-100 border border-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <NavLink to="/">
+              <NavLink to="/" className={({isActive}) => isActive ? "active" : '' } >
                 <li>
                   <a>Home</a>
                 </li>
