@@ -3,6 +3,7 @@ import Nav from "../NavBar/Nav";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from "react";
+import { saveReadBooks, saveWishBooks } from "../Utility/localStorage";
 
 const BookDetails = () => {
   const books = useLoaderData();
@@ -26,6 +27,7 @@ const BookDetails = () => {
   const [clicked, setClicked] = useState();
 
    const handleReadTostify = () =>{
+    saveReadBooks(bookIdInt);
     if(!clicked){
     toast.success("Book Added Read Books List!")
     setClicked(true);
@@ -37,6 +39,7 @@ const BookDetails = () => {
 
    const handleWhishListTostify = () =>{
     if(!clicked){
+      saveWishBooks(bookIdInt)
       toast.success("Book Added Whish Books List!")
       setClicked(true);
       }
